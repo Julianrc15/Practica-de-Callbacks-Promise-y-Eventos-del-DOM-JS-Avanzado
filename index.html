@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css"> 
+    <title>Práctica de Callbacks, Promise y Eventos del DOM – JS Avanzado</title>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>Práctica – JS Avanzado</h1>
+        <hr>
+
+        <div class="row">
+           
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Calcular pago de empleados</h3>
+                    <hr>
+                    
+                    <form>
+                        <div class="mb-3">
+                          
+                          <input type="text" class="form-control" id="nombreEmpleado" autocomplete="off" placeholder="Ingrese nombre del empleado">
+                            <label id="mensajeNombre" class="form-label"></label>
+
+                        </div>
+                        
+                        <div class="mb-3">
+                        
+                            <input type="text" class="form-control" id="salarioEmpleado" autocomplete="off" placeholder="Ingrese salario del empleado">
+                            <label id="mensajeSalario" class="form-label"></label>
+                            
+                        </div>
+                        <div class="mb-3">
+                        
+                            <input type="text" class="form-control" id="valorVenta" autocomplete="off" placeholder="Ingrese total ventas del empleado">
+                            <label id="mensajeVenta" class="form-label"></label>
+                            
+                        </div>
+
+                        <!-- select     -->
+                        <select class="form-select mb-3" id="zonas" >
+                            <option selected>Elija zona del vendedor</option>
+                            <option value="norte">Norte</option>
+                            <option value="sur">Sur</option>
+                            <option value="oriente">Oriente</option>
+                        </select>
+
+                        <!-- form -->
+
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary"  id="btnCalcular" type="button">Calcular Salario</button>
+                        </div>
+
+                    </form>
+
+                        <br><br>
+                    
+                        <h4>Valor de comisión:</h4>
+                        <label id="valorComision" class="form-label"></label>
+                        <br><br>
+                        <h4>Total a pagar:</h4>
+                        <label id="totalPago" class="form-label"></label>
+                    
+                    
+
+
+                </div>
+            <div class="col-6 col-md-8" id="listaTrabajadores">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary"  id="btnListar" type="button">Lista de Empleados</button>
+                </div>
+                <br>
+                <label id="cargando"></label>
+                
+                    
+
+                
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/calcularSalario.js"></script>    
+    <script type="text/javascript" src="/listarUsuarios.js"></script>    
+</body>
+</html>
